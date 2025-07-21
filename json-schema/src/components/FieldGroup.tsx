@@ -30,15 +30,6 @@ export const FieldGroup: React.FC<FieldGroupProps> = ({ fields, level, onChange 
     ]);
   };
 
-  const handleToggleNested = (idx: number, nested: boolean) => {
-    const field = fields[idx];
-    if (nested) {
-      handleFieldChange(idx, { ...field, type: "nested", children: field.children || [] });
-    } else {
-      handleFieldChange(idx, { ...field, type: "string", children: undefined });
-    }
-  };
-
   return (
     <div>
       {fields.map((field, idx) => (
@@ -48,7 +39,6 @@ export const FieldGroup: React.FC<FieldGroupProps> = ({ fields, level, onChange 
             level={level}
             onChange={updated => handleFieldChange(idx, updated)}
             onDelete={() => handleDelete(idx)}
-            onToggleNested={nested => handleToggleNested(idx, nested)}
           />
           {field.type === "nested" && field.children && (
             <FieldGroup

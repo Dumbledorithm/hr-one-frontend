@@ -45,18 +45,19 @@ export default function App() {
           type="submit"
           style={{
             marginTop: 16,
-            width: 180,
+            width: 120,
             alignSelf: "flex-start",
-            background: "linear-gradient(90deg, #6366f1 0%, #2563eb 100%)",
-            color: "#fff",
-            border: "none",
+            background: "#fff",
+            color: "#222",
+            border: "1.5px solid #bbb",
             borderRadius: 6,
-            padding: "12px 0",
-            fontWeight: 700,
-            fontSize: 18,
+            padding: "8px 0",
+            fontWeight: 600,
+            fontSize: 16,
             letterSpacing: 0.01,
-            boxShadow: "0 2px 8px rgba(79,70,229,0.08)",
+            boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
             cursor: "pointer",
+            transition: "background 0.2s, border 0.2s",
           }}
         >
           Submit

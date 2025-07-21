@@ -36,17 +36,14 @@ export default function App() {
     <div style={{ display: "flex", minHeight: "100vh", background: "#fafbfc" }}>
       <form
         onSubmit={handleSubmit}
-        style={{ flex: 1, padding: 32, maxWidth: 700, display: "flex", flexDirection: "column", minHeight: "100vh" }}
+        style={{ flex: 1, padding: 32, maxWidth: 700 }}
       >
-        <div style={{ flex: 1 }}>
-          <FieldGroup fields={fields} level={0} onChange={setFields} />
-        </div>
+        <FieldGroup fields={fields} level={0} onChange={setFields} />
         <button
           type="submit"
           style={{
             marginTop: 16,
             width: 120,
-            alignSelf: "flex-start",
             background: "#fff",
             color: "#222",
             border: "1.5px solid #bbb",
@@ -58,6 +55,7 @@ export default function App() {
             boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
             cursor: "pointer",
             transition: "background 0.2s, border 0.2s",
+            display: "block",
           }}
         >
           Submit

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import type { FieldNode } from "./types";
 import { FieldGroup } from "./components/FieldGroup";
 import "./index.css";

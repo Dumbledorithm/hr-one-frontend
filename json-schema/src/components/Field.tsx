@@ -1,4 +1,3 @@
-import React from "react";
 import type { FieldNode, FieldType } from "../types";
 
 interface FieldProps {
@@ -6,7 +5,6 @@ interface FieldProps {
   level: number;
   onChange: (field: FieldNode) => void;
   onDelete: () => void;
-  onToggleNested: (nested: boolean) => void;
 }
 
 const FIELD_TYPES: FieldType[] = ["string", "number", "boolean", "nested"];
@@ -50,7 +48,7 @@ const Toggle: React.FC<{ checked: boolean; onChange: (checked: boolean) => void 
   </label>
 );
 
-export const Field: React.FC<FieldProps> = ({ field, level, onChange, onDelete, onToggleNested }) => {
+export const Field: React.FC<FieldProps> = ({ field, level, onChange, onDelete }) => {
   return (
     <div
       style={{
